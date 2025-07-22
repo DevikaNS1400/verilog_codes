@@ -1,0 +1,16 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+module NAND_NOR_SWLVL_tb;
+reg A,B;
+wire Y_nand,Y_nor;
+NAND_NOR_SWLVL u1(.Y_nand(Y_nand),.Y_nor(Y_nor),.A(A),.B(B));
+initial
+begin
+A=0;B=0;#10;
+A=0;B=1;#10;
+A=1;B=0;#10;
+A=1;B=1;#10;
+$finish;
+end
+endmodule
