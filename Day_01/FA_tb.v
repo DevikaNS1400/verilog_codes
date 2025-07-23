@@ -24,8 +24,8 @@ module FA_tb;
 reg A,B,C;
 wire S,c_out;
 //FA_gtlvl u1(.S(S),.c_out(c_out),.A(A),.B(B),.C(C));//FA_gtlvl
-//FA_Dataflow u2(.S(S),.c_out(c_out),.A(A),.B(B),.C(C));//FA_dataflow
-  FA_using_HA u3(.S(S),.c_out(c_out),.A(A),.B(B),.C(C));//FA_using_HA
+FA_Dataflow u2(.S(S),.c_out(c_out),.A(A),.B(B),.C(C));//FA_dataflow
+//  FA_using_HA u3(.S(S),.c_out(c_out),.A(A),.B(B),.C(C));//FA_using_HA
 initial
 begin
 
