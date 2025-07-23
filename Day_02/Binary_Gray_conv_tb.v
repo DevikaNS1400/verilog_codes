@@ -7,7 +7,6 @@
 module Binary_Gray_conv_tb;
 reg [3:0]B;
 wire [3:0]G;
-//Binary_gray_conv u1(.G(G),.B(B));
 binary2gray u2(.G(G),.B(B));
 
 initial
