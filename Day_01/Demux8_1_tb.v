@@ -1,0 +1,42 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 23.07.2025 16:28:20
+// Design Name: 
+// Module Name: Demux8_1_tb
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module Demux8_1_tb;
+reg D;
+reg [2:0]S;
+wire I0,I1,I2,I3,I4,I5,I6,I7;
+
+Demux_8_1 u1(.I0(I0),.I1(I1),.I2(I2),.I3(I3),.I4(I4),.I5(I5),.I6(I6),.I7(I7),.S(S),.D(D));
+initial
+begin
+D=1;S=000;#10;
+D=1;S=001;#10;
+D=1;S=010;#10;
+D=1;S=011;#10;
+D=1;S=100;#10;
+D=1;S=101;#10;
+D=1;S=110;#10;
+D=1;S=111;#10;
+$finish;
+end
+
+endmodule
