@@ -3,10 +3,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Decoder4_1_tb;
+module Decoder2_4_tb;
 reg A,B;
 wire I0,I1,I2,I3;
-Decoder_4_1 u1(.A(A),.B(B),.I0(I0),.I1(I1),.I2(I2),.I3(I3));
+Decoder_2_4 u1(.A(A),.B(B),.I0(I0),.I1(I1),.I2(I2),.I3(I3));
 initial
 begin
 A=0;B=0;#10;
