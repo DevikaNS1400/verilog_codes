@@ -15,6 +15,8 @@ din=1;#10;
 din=0;#10;
 din=1;#10;
 din=0;#10;
+din=1;#10;
+din=0;#10;
 din=0;#10;
 $finish;
 end
