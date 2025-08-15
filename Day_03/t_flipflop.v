@@ -1,0 +1,18 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+module t_flipflop(
+output reg Q,
+output Qn,
+input T,
+input clk);
+initial  Q=1'b0;
+always@(posedge clk)begin
+case(T)
+1'b0:Q<=Q;
+1'b1:Q<=~Q;
+default Q<=1'bx;
+endcase
+end
+assign Qn=~Q;
+endmodule
