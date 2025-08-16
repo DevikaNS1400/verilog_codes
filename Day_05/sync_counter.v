@@ -1,0 +1,20 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+module sync_counter(
+output reg [3:0]count,
+input clk,
+input rst,
+input up
+    );
+always@(posedge clk)begin
+if(!rst)
+count<=4'b0;
+else begin
+if(up)
+count<=count+1'b1;
+else 
+count<=count-1'b1;
+end
+end
+endmodule

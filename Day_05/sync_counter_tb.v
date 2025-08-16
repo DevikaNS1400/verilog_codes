@@ -1,0 +1,15 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+module sync_counter_tb();
+reg clk,rst,up;
+wire [3:0]count;
+sync_counter u1(.count(count),.clk(clk),.rst(rst),.up(up));
+always #5 clk=~clk;
+initial begin
+clk=0;rst=0;#10;
+rst=1;up=1;#100;
+up=0;#50;
+$finish;
+end
+endmodule
